@@ -20,6 +20,7 @@
                             <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="0lt-Sl-cCD" customClass="FaceView" customModule="Happiness" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="color">
                                         <color key="value" red="0.0" green="0.82062343311760344" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -31,6 +32,9 @@
                                         <real key="value" value="7"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="L7A-Bm-roF" appends="YES" id="mXp-qV-UcE"/>
+                                </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -46,6 +50,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EKW-bc-HL8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="L7A-Bm-roF">
+                    <connections>
+                        <action selector="changeHappiness:" destination="Qc8-nd-MsO" id="PPq-4t-kaO"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="975" y="324"/>
         </scene>
